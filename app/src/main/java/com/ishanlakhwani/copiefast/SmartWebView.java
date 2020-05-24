@@ -13,7 +13,7 @@ class SmartWebView {
 	/* -- PERMISSION VARIABLES -- */
 	static boolean ASWP_JSCRIPT       = true;         // enable JavaScript for webview
 	static boolean ASWP_FUPLOAD       = true;         // upload file from webview
-	static boolean ASWP_CAMUPLOAD     = true;         // enable upload from camera for photos
+	static boolean ASWP_CAMUPLOAD     = false;         // enable upload from camera for photos
 	static boolean ASWP_ONLYCAM       = false;        // incase you want only camera files to upload
 	static boolean ASWP_MULFILE       = true;         // upload multiple files in webview
 	static boolean ASWP_LOCATION      = false;         // track GPS locations
