@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "914075107286",
+    "firebase_url": "https://copiefast-624e2.firebaseio.com",
+    "project_id": "copiefast-624e2",
+    "storage_bucket": "copiefast-624e2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:914075107286:android:5892507058dac3f27bae77",
+        "android_client_info": {
+          "package_name": "com.ishanlakhwani.copiefast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "914075107286-1fmakvmf765vol2b7omheakf79e1bkct.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXIakMX8UwUghgoHu29P9X75Dt7KcYwSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "914075107286-1fmakvmf765vol2b7omheakf79e1bkct.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
