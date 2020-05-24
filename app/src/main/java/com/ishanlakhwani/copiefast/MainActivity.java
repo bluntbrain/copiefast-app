@@ -64,6 +64,7 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.facebook.FacebookSdk;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -81,6 +82,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.iid.FirebaseInstanceId;
 
@@ -124,6 +127,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 	private static String ASWV_SEARCH		= SmartWebView.ASWV_SEARCH;
 	private static String ASWV_SHARE_URL	= SmartWebView.ASWV_SHARE_URL;
 	private static String ASWV_EXC_LIST		= SmartWebView.ASWV_EXC_LIST;
+	private AdView mAdView;
 
 	private static String ASWV_F_TYPE   	= SmartWebView.ASWV_F_TYPE;
 
@@ -226,6 +230,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
 		Log.w("READ_PERM = ",Manifest.permission.READ_EXTERNAL_STORAGE);
 		Log.w("WRITE_PERM = ",Manifest.permission.WRITE_EXTERNAL_STORAGE);
+		MobileAds.initialize(this, new OnInitializationCompleteListener() {
+			@Override
+			public void onInitializationComplete(InitializationStatus initializationStatus) {
+			}
+		});
+//		MobileAds.initialize(this, "ca-app-pub-5083455238941663~5969406857");
+//		mAdView = findViewById(R.id.msw_ad_view);
+//		AdRequest adRequest = new AdRequest.Builder().build();
+//		mAdView.loadAd(adRequest);
 
         // prevent app from being started again when it is still alive in the background
         if (!isTaskRoot()) {
@@ -424,8 +437,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		if(ASWP_ADMOB) {
 			MobileAds.initialize(this, ASWV_ADMOB);
 			AdView asw_ad_view = findViewById(R.id.msw_ad_view);
-			AdRequest adRequest = new AdRequest.Builder().build();
-			asw_ad_view.loadAd(adRequest);
+			AdRequest adReq = new AdRequest.Builder().build();
+			asw_ad_view.loadAd(adReq);
 		}
 
         asw_view.setWebChromeClient(new WebChromeClient() {

@@ -24,9 +24,9 @@
         tools:ignore="RtlHardcoded">
         <ImageView
             android:id="@+id/msw_logo"
-            android:layout_width="500dp"
-            android:layout_height="300dip"
-            android:src="@raw/front_splash"
+            android:layout_width="200dp"
+            android:layout_height="200dip"
+            android:src="@mipmap/ic_launcher_round"
             android:gravity="center_vertical|center_horizontal|center"
             android:contentDescription="@string/image_view"
             android:layout_gravity="top"
@@ -80,7 +80,7 @@
 		android:layout_alignParentBottom="true"
 		android:layout_centerHorizontal="true"
 		ads:adSize="BANNER"
-		ads:adUnitId="ca-app-pub-3940256099942544/6300978111"> <!-- this is just a test ad unit ID, replace it with your real ID right before publishing or your account can be suspended -->
+		ads:adUnitId="ca-app-pub-5083455238941663/4899867765"> <!-- this is just a test ad unit ID, replace it with your real ID right before publishing or your account can be suspended -->
 	</com.google.android.gms.ads.AdView>
     <ProgressBar
         android:id="@+id/msw_progress"
